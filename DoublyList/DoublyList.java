@@ -13,6 +13,11 @@ public class DoublyList<T> {
         public Node(E data){
             this.data=data;
         }
+        public Node(E data,Node<E> next,Node<E> prev){
+            this.data=data;
+            this.next=next;
+            this.prev=prev;
+        }
     }
 
     public DoublyList(T data){
@@ -34,11 +39,21 @@ public class DoublyList<T> {
         newNode.prev=node;
         tail=newNode;
     }
+    public void prepend(T data){
+        if(head==null){
+            head=new Node<T>(data);
+            tail=head;
+        }
+        Node<T> newHead = new Node<T>(data);
+        head.prev=newHead;
+        newHead.next=head;
+        head=newHead;
+    }
 
     public void delete(T data){
         Node<T> node = head;
         while(node.next.data!=data){
-            if(node.next.next==null){
+            if(node.next==tail || node.next.next==null){
                 break;
             }
             node = node.next;
@@ -53,10 +68,30 @@ public class DoublyList<T> {
         }
     }
 
+    public void deleteHead(){
+        if(head.next!=tail || head.next!=null){
+            head=head.next;
+            head.prev.next=null;
+            head.prev=null;
+        } else {
+            head=null;
+        }
+    }
+
+    public void deleteTail(){
+        if(tail.prev!=null){
+            tail=tail.prev;
+            tail.next.prev=null;
+            tail.next=null;
+        } else {
+            tail=null;
+        }
+    }
+
     public boolean contains(T data){
         Node<T> node = head;
         while(node.next.data!=data){
-            if(node.next.next==null){
+            if(node.next==tail || node.next.next==null){
                 break;
             }
             node = node.next;
@@ -71,12 +106,16 @@ public class DoublyList<T> {
     public Optional<Node<T>> getNode(T data){
         Node<T> node = head;
         while(node.next.data!=data){
-            node = node.next;
-            if(node.next==null){
+            if(node.next==tail || node.next.next==null){
                 break;
             }
+            node = node.next;
         }
-        return Optional.of(node.next);
+        if(node.next.data==data){
+            return Optional.of(node.next);
+        } else {
+            return Optional.empty();
+        }
     }
 
     public T getHead(){
@@ -97,7 +136,7 @@ class Test {
         DoublyList<Integer> list = new DoublyList<Integer>(24);
         list.append(25);
         list.append(26);
-        System.out.println(list.contains(25));
+        System.out.println(list.getNode(25).isEmpty());
  
     }
 }
