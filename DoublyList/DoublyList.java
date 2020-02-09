@@ -3,66 +3,101 @@ package DoublyList;
 import java.util.Optional;
 
 public class DoublyList<T> {
-    private T data;
-    private DoublyList<T> next;
-    private DoublyList<T> prev;
-    private DoublyList<T> head;
+    private Node<T> head;
+    private Node<T> tail;
+
+    private class Node<E>{
+        Node<E> next;
+        Node<E> prev;
+        E data;
+        public Node(E data){
+            this.data=data;
+        }
+    }
 
     public DoublyList(T data){
-        this.data=data;
+        head = new Node<T>(data);
+        tail=head;
     }
 
     public void append (T data){
         if(head==null){
-            head=new DoublyList<T>(data);
+            head=new Node<T>(data);
+            tail=head;
         }
-        DoublyList<T> node = head;
+        Node<T> node = head;
         while(node.next!=null){
             node = node.next;
         }
-        DoublyList<T> newNode = new DoublyList<T>(data);
+        Node<T> newNode = new Node<T>(data);
         node.next=newNode;
         newNode.prev=node;
+        tail=newNode;
     }
+
     public void delete(T data){
-        DoublyList<T> node = head;
+        Node<T> node = head;
         while(node.next.data!=data){
+            if(node.next.next==null){
+                break;
+            }
             node = node.next;
         }
-        node.next.prev=null;
-        node.next=node.next.next;
-        node.next.prev=node;
+        if(node.next.data==data){
+            node.next.prev=null;
+            node.next=node.next.next;
+            node.next.prev=node;
+            if(node.next.next==null){
+                tail=node.next.next;
+            }
+        }
     }
+
     public boolean contains(T data){
-        DoublyList<T> node = head;
-        while(node.next!=null || node.next.data!=data){
+        Node<T> node = head;
+        while(node.next.data!=data){
+            if(node.next.next==null){
+                break;
+            }
             node = node.next;
         }
-        if(node.next.data!=null){
+        if(node.next.data==data){
             return true;
         } else {
             return false;
         }
     }
 
-    public Optional<DoublyList<T>> getNode(T data){
-        DoublyList<T> node = head;
-        while(node.next!=null || node.next.data!=data){
+    public Optional<Node<T>> getNode(T data){
+        Node<T> node = head;
+        while(node.next.data!=data){
             node = node.next;
+            if(node.next==null){
+                break;
+            }
         }
-        if(node.next.data!=null){
-            return Optional.of(node.next);
-        } else {
-            return Optional.of(node.next);
-        }
+        return Optional.of(node.next);
     }
 
-    public T getData(){
-        return this.data;
-    }
-    public void setData(T data){
-        this.data=data;
-    }
-    
+    public T getHead(){
+        return this.head.data;
 
+    }
+
+    public T getTail(){
+        return this.tail.data;
+    }
+
+
+}
+
+
+class Test {
+    public static void main(String[] args) {
+        DoublyList<Integer> list = new DoublyList<Integer>(24);
+        list.append(25);
+        list.append(26);
+        System.out.println(list.contains(25));
+ 
+    }
 }
