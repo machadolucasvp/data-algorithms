@@ -39,6 +39,7 @@ public class DoublyList<T> {
         newNode.prev=node;
         tail=newNode;
     }
+    
     public void prepend(T data){
         if(head==null){
             head=new Node<T>(data);
@@ -126,10 +127,7 @@ public class DoublyList<T> {
     public T getTail(){
         return this.tail.data;
     }
-
-
 }
-
 
 class Test {
     public static void main(String[] args) {
