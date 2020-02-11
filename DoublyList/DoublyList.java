@@ -127,6 +127,7 @@ public class DoublyList<T> {
     public T getTail(){
         return this.tail.data;
     }
+    
 }
 
 class Test {
