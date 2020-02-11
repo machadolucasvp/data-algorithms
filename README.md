@@ -5,7 +5,8 @@
 1. [Binary Search](https://github.com/lucasvufma/data-algorithms/tree/master/BinarySearch)
 2. [Dynamic Array](https://github.com/lucasvufma/data-algorithms/tree/master/DynamicArray)
 3. [Doubly Linked List](https://github.com/lucasvufma/data-algorithms/tree/master/DoublyList)
-4. [Stack and Queues](https://github.com/lucasvufma/data-algorithms/tree/master/Stack&Queus)
+4. [Stack and Queue](https://github.com/lucasvufma/data-algorithms/tree/master/StackAndQueue)
+5. [Binary Heap](https://github.com/lucasvufma/data-algorithms/tree/master/BinaryHeap)
 
 
 *******
