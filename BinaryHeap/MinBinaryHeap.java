@@ -74,7 +74,6 @@ public class MinBinaryHeap {
             }
             index=smallerChildIndex;
         }
-
     }
 
     public void bubbleUp(){
@@ -84,9 +83,7 @@ public class MinBinaryHeap {
 
              swap(getParentIndex(index),index);
              index--;
-
         }
-
     }
     
 }
