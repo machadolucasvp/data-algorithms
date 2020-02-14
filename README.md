@@ -9,5 +9,6 @@
 5. [Binary Heap](https://github.com/lucasvufma/data-algorithms/tree/master/BinaryHeap)
 6. [Binary Search Tree](https://github.com/lucasvufma/data-algorithms/tree/master/BinarySearchTree)
 7. [Hash Table](https://github.com/lucasvufma/data-algorithms/tree/master/HashTable)
+8. [AVL Tree](https://github.com/lucasvufma/data-algorithms/tree/master/AVLTree)
 
 *******

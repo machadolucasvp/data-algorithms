@@ -2,7 +2,7 @@ package HashTable;
 
 import java.util.LinkedList;
 
-public class HashtableChained<T, E> {
+public class HashTableChained<T, E> {
 
     private LinkedList<Entry<T,E>>[] table;
 
@@ -12,7 +12,7 @@ public class HashtableChained<T, E> {
     private double maxLoadFactor;
     private int capacity,size=0;
 
-    public HashtableChained(int capacity,double maxLoadFactor){
+    public HashTableChained(int capacity,double maxLoadFactor){
         this.capacity=Math.max(capacity,this.DEFAULT_CAP);
         if(maxLoadFactor>1 || maxLoadFactor <0){
             throw new IllegalArgumentException("Maximum Load Factor needs be in (0,1] interval");
@@ -20,7 +20,7 @@ public class HashtableChained<T, E> {
             this.maxLoadFactor=maxLoadFactor;
         }
     }
-    public HashtableChained(){
+    public HashTableChained(){
         this.capacity=DEFAULT_CAP;
         this.maxLoadFactor=DEFAULT_MAX_LOADFACTOR;
     }
@@ -86,7 +86,7 @@ public class HashtableChained<T, E> {
         if(chain==null){
             return null;
         }
-        //Linear search O(n).
+        //Linear search O(n) in worst case.
         for(Entry<T,E> entry : chain){
             if(entry.key.equals(key)){
                 return entry;
