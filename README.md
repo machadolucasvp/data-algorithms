@@ -11,4 +11,4 @@
 7. [Hash Table](https://github.com/lucasvufma/data-algorithms/tree/master/HashTable)
 8. [AVL Tree](https://github.com/lucasvufma/data-algorithms/tree/master/AVLTree)
 
-*******z
+*******

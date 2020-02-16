@@ -27,13 +27,52 @@ public class BinarySearchTree{
      
     }
 
+    public void remove(int data){
+        if(root!=null){
+            root=remove(root,data);
+        }
+    }
+    public Node remove(Node node,int data){
+        if(node.data==data){
+            if(node.left==null){
+                Node rightNode = node.right;
+                node.right=null;
+                node=null;
+                return rightNode;
+            }else if(node.right==null){
+                Node leftNode = node.left;
+                node.left=null;
+                node=null;
+                return leftNode;
+            }else{
+                Node maxNode = findMaxNode(node.left);
+                node.data=maxNode.data;
+                node.left=remove(node.left,maxNode.data);
+            }
+        }else{
+            if(data<node.data){
+                node.left=remove(node.left,data);
+            }else{
+                node.right=remove(node.right,data);
+            }
+        }
+        return node;
+        
+    }
+
+    public Node findMaxNode(Node node){
+        while(node.right!=null){
+            node=node.right;
+        }
+        return node;
+    }
+
     public boolean contains(int data){
         if(root==null){
             return false;
         }else{
             return contains(data,root);
         }
-       
     }
 
     public boolean contains(int data,Node node){

@@ -5,9 +5,9 @@ public class AVLTree{
     private Node root; 
     
     public class Node{
-        private int heigth;
+        public int heigth;
         private Integer data;
-        private Node left,right;
+        public Node left,right;
         private int balanceFactor;
 
         public Node(int data){
@@ -31,6 +31,7 @@ public class AVLTree{
             insert(root,data);
             updateBalanceFactor(root);
             root=balanceTree(root);
+            
         }
     }
 
@@ -48,7 +49,6 @@ public class AVLTree{
             if(node.right==null){
                 Node newNode = new Node(data);
                 node.right=newNode;
-                balanceTree(node.right);
             }else{
                 insert(node.right,data);
             }
@@ -56,7 +56,7 @@ public class AVLTree{
             node.right=balanceTree(node.right);
         }
     }
-    
+
     public void updateBalanceFactor(Node node){
         int leftChildHeigth = node.left==null ? -1 : node.left.heigth;
         int rightChildHeigth = node.right==null ? -1 : node.right.heigth;
@@ -89,33 +89,117 @@ public class AVLTree{
         Node newParent = node.left;
         node.left=newParent.right;
         newParent.right=node;
+        updateBalanceFactor(newParent);
+        updateBalanceFactor(node);
         return newParent;
     }
     public Node leftRotation(Node node){
         Node newParent = node.right;
         node.right=newParent.left;
         newParent.left=node;
+        updateBalanceFactor(newParent);
+        updateBalanceFactor(node);
         return newParent;
     }
+
+    public void remove(int data){
+        if(root!=null){
+            root=remove(root,data);
+        }
+    }
+    public Node remove(Node node,int data){
+        if(node.data==data){
+            if(node.left==null){
+                Node rightNode = node.right;
+                node.right=null;
+                node=null;
+                return rightNode;
+            }else if(node.right==null){
+                Node leftNode = node.left;
+                node.left=null;
+                node=null;
+                return leftNode;
+            }else{
+                Node maxNode = findMaxNode(node.left);
+                node.data=maxNode.data;
+                node.left=remove(node.left,maxNode.data);
+            }
+        }else{
+            if(data<node.data){
+                node.left=remove(node.left,data);
+            }else{
+                node.right=remove(node.right,data);
+            }
+        }
+        updateBalanceFactor(node);
+        return balanceTree(node); 
+    }
+
+    public Node findMaxNode(Node node){
+        while(node.right!=null){
+            node=node.right;
+        }
+        return node;
+    }
+
+
+    public void inOrder(Node node){
+        if(node.left!=null){
+            inOrder(node.left);
+        }
+        visit(node);
+        if(node.right!=null){
+            inOrder(node.right);
+        }
+    }
+
+
+    public void preOrder(Node node){
+        visit(node);
+        if(node.left!=null){
+            preOrder(node.left);
+        }
+        if(node.right!=null){
+            preOrder(node.right);
+        }
+    }
+
+    public void postOrder(Node node){
+        if(node.left!=null){
+            postOrder(node.left);
+        }
+        if(node.right!=null){
+            postOrder(node.right);
+        }
+        visit(node);
+    }
+
+    public void visit(Node node){
+        System.out.println(node.data);
+    }
+    public Node getRoot(){
+        return this.root;
+    }
+    
 
 }
 
 
-/* Alternative Way
-    public void insertOPT(int data){
-        root=insertOPT(root,data);
-    }
 
-    public Node insertOPT(Node node,int data){
-        if(node==null){
-            node=new Node(data);
-        }else{
-            if(data<=node.data){
-                node.left = insertOPT(node.left,data);
-            }else{
-                node.right = insertOPT(node.right,data);
-            }
-        }
-        return node;
+class Test {
+    public static void main(String[] args) {
+        AVLTree tree = new AVLTree();
+        tree.insert(8);
+        tree.insert(4);
+        tree.insert(22);
+        tree.insert(6);
+        tree.insert(7);
+        tree.insert(3);
+        tree.insert(5);
+        tree.insert(6);
+        tree.insert(9);
+        //tree.postOrder(tree.getRoot());
+        System.out.println(tree.getRoot().heigth);
+        
     }
-*/
+}
