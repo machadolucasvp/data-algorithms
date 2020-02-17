@@ -1,10 +1,11 @@
-package DoublyList;
+package datastructures.doublylist;
 
 import java.util.Optional;
 
 public class DoublyList<T> {
     private Node<T> head;
     private Node<T> tail;
+
 
     private class Node<E>{
         Node<E> next;

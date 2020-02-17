@@ -1,4 +1,4 @@
-package BinaryHeap;
+package datastructures.binaryheap;
 
 import java.util.ArrayList;
 

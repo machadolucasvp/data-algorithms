@@ -1,4 +1,4 @@
-package DynamicArray;
+package datastructures.dynamicarray;
 
 public class DynamicArray<T>{
     private Object[] staticArray;

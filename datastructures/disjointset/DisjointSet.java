@@ -1,4 +1,4 @@
-package DisjointSet;
+package datastructures.disjointset;
 
 public class DisjointSet{
     private int[] idArray;
@@ -27,6 +27,7 @@ public class DisjointSet{
         }
         return idArray[item]=find(idArray[item]);
     }
+
     public boolean inside(int item1,int item2){
         if(item1>=size || item2>=size){
             return false;
@@ -49,5 +50,12 @@ public class DisjointSet{
         return sizeOfComponent[find(item)];
     }
 
+    public int getNumComponents(){
+        return this.numComponents;
+    }
+    
+    public int getSize(){
+        return this.size;
+    }
     
 }

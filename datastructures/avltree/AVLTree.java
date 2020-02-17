@@ -1,4 +1,4 @@
-package AVLTree;
+package datastructures.avltree;
 
 public class AVLTree{
 
