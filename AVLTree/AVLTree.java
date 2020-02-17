@@ -30,8 +30,7 @@ public class AVLTree{
         }else{
             insert(root,data);
             updateBalanceFactor(root);
-            root=balanceTree(root);
-            
+            root=balanceTree(root);         
         }
     }
 
@@ -93,6 +92,7 @@ public class AVLTree{
         updateBalanceFactor(node);
         return newParent;
     }
+
     public Node leftRotation(Node node){
         Node newParent = node.right;
         node.right=newParent.left;
@@ -107,6 +107,7 @@ public class AVLTree{
             root=remove(root,data);
         }
     }
+
     public Node remove(Node node,int data){
         if(node.data==data){
             if(node.left==null){
@@ -177,10 +178,10 @@ public class AVLTree{
     public void visit(Node node){
         System.out.println(node.data);
     }
+
     public Node getRoot(){
         return this.root;
     }
-    
 
 }
 
@@ -192,14 +193,9 @@ class Test {
         tree.insert(8);
         tree.insert(4);
         tree.insert(22);
-        tree.insert(6);
-        tree.insert(7);
-        tree.insert(3);
-        tree.insert(5);
-        tree.insert(6);
-        tree.insert(9);
-        //tree.postOrder(tree.getRoot());
-        System.out.println(tree.getRoot().heigth);
-        
+        tree.remove(22);
+        tree.remove(8);
+        tree.postOrder(tree.getRoot());
+        System.out.println(tree.getRoot().heigth);   
     }
 }
