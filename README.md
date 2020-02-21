@@ -19,3 +19,4 @@
 * [Bubble Sort](https://github.com/lucasvufma/data-algorithms/tree/master/sortingalgorithms/BubbleSort.java)
 * [Merge Sort](https://github.com/lucasvufma/data-algorithms/tree/master/sortingalgorithms/MergeSort.java)
 * [Quicksort](https://github.com/lucasvufma/data-algorithms/tree/master/sortingalgorithms/Quicksort.java)
+* [Heap Sort](https://github.com/lucasvufma/data-algorithms/tree/master/sortingalgorithms/HeapSort.java)
