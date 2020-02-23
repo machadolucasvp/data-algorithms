@@ -1,18 +1,18 @@
 
 ## Data Structures
 
-* [Dynamic Array](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/DynamicArray)
-* [Doubly Linked List](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/DoublyList)
-* [Stack and Queue](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/StackAndQueue)
-* [Disjoint Set](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/DisjointSet)
-* [Binary Heap](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/BinaryHeap)
-* [Binary Search Tree](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/BinarySearchTree)
-* [Hash Table](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/HashTable)
-* [AVL Tree](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/AVLTree)
+* [Dynamic Array](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/dynamicarray)
+* [Doubly Linked List](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/doublylist)
+* [Stack and Queue](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/stackandqueue)
+* [Disjoint Set](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/disjointset)
+* [Binary Heap](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/binaryheap)
+* [Binary Search Tree](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/binarysearchtree)
+* [Hash Table](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/hashtable)
+* [AVL Tree](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/avltree)
 
 ## Search Algorithms
 
- * [Binary Search](https://github.com/lucasvufma/data-algorithms/tree/master/searchalgorithms/BinarySearch)
+ * [Binary Search](https://github.com/lucasvufma/data-algorithms/tree/master/searchalgorithms/binarysearch)
 
 ## Sorting Algorithms
 
