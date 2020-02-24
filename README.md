@@ -5,6 +5,7 @@
 * [Doubly Linked List](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/doublylist)
 * [Stack and Queue](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/stackandqueue)
 * [Disjoint Set](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/disjointset)
+* [Hash Set](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/hashset)
 * [Binary Heap](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/binaryheap)
 * [Binary Search Tree](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/binarysearchtree)
 * [Hash Table](https://github.com/lucasvufma/data-algorithms/tree/master/datastructures/hashtable)
