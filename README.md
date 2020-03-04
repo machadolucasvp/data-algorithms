@@ -15,6 +15,7 @@
 
  * [Binary Search](https://github.com/lucasvufma/data-algorithms/tree/master/searchalgorithms/binarysearch)
  * [Breadth First Search](https://github.com/lucasvufma/data-algorithms/tree/master/searchalgorithms/breadthfirstsearch)
+ * [Depth First Search](https://github.com/lucasvufma/data-algorithms/tree/master/searchalgorithms/depthfirstsearch)
 
 ## Sorting Algorithms
 
