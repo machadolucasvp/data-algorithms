@@ -26,3 +26,4 @@
 
 ## Dynamic Programming
 * [Fibonnaci](https://github.com/lucasvufma/data-algorithms/tree/master/dynamicprogramming/Fibonnaci.java)
+* [Power Set](https://github.com/lucasvufma/data-algorithms/tree/master/dynamicprogramming/PowerSet.java)
