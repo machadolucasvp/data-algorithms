@@ -3,11 +3,11 @@ package dynamicprogramming;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
-
-Challenge: write a method to return all subsets of a set
-
-*/
+/**
+ * Challenge: Write a method to return all subsets of a set
+ * Time-Complexity of Solution Provided: O(n*2^n)
+ * Space-Complexity of Solution Provided: O(n*2^n)
+ */
 
 public class PowerSet {
     public static List<List<Integer>> powerSetOf(int[] array) {
