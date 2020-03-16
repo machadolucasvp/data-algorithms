@@ -29,4 +29,5 @@
 * [Power Set](https://github.com/lucasvufma/data-algorithms/tree/master/dynamicprogramming/PowerSet.java)
 * [Triple Stair](https://github.com/lucasvufma/data-algorithms/tree/master/dynamicprogramming/TripleStair.java)
 * [Fixed Point](https://github.com/lucasvufma/data-algorithms/tree/master/dynamicprogramming/MagicIndex.java)
-* [Tower Of Hanoi](https://github.com/lucasvufma/data-algorithms/tree/master/dynamicprogramming/TowerOfHanoi.java)
+* [Tower of Hanoi](https://github.com/lucasvufma/data-algorithms/tree/master/dynamicprogramming/TowerOfHanoi.java)
+* [Permutation I (without Duplicates)](https://github.com/lucasvufma/data-algorithms/tree/master/dynamicprogramming/Permutation.java)
