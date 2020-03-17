@@ -18,7 +18,7 @@
  * [Depth First Search](https://github.com/lucasvufma/data-algorithms/tree/master/searchalgorithms/depthfirstsearch)
 
 ## Sorting Algorithms
-
+* [Insertion Sort](https://github.com/lucasvufma/data-algorithms/tree/master/sortingalgorithms/InsertionSort.java)
 * [Bubble Sort](https://github.com/lucasvufma/data-algorithms/tree/master/sortingalgorithms/BubbleSort.java)
 * [Merge Sort](https://github.com/lucasvufma/data-algorithms/tree/master/sortingalgorithms/MergeSort.java)
 * [Quicksort](https://github.com/lucasvufma/data-algorithms/tree/master/sortingalgorithms/Quicksort.java)
