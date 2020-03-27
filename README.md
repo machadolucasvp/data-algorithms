@@ -31,3 +31,7 @@
 * [Fixed Point](https://github.com/lucasvufma/data-algorithms/tree/master/dynamicprogramming/MagicIndex.java)
 * [Tower of Hanoi](https://github.com/lucasvufma/data-algorithms/tree/master/dynamicprogramming/TowerOfHanoi.java)
 * [Permutation I (without Duplicates)](https://github.com/lucasvufma/data-algorithms/tree/master/dynamicprogramming/Permutation.java)
+
+## Leetcode
+
+* [(21) Merge Two Sorted Linked Lists](https://github.com/lucasvufma/data-algorithms/tree/master/leetcode/MergeTwoSortedLists.java)
