@@ -35,3 +35,4 @@
 ## Leetcode
 
 * [(21) Merge Two Sorted Linked Lists](https://github.com/lucasvufma/data-algorithms/tree/master/leetcode/MergeTwoSortedLists.java)
+* [(83) Remove Duplicates Sorted List](https://github.com/lucasvufma/data-algorithms/tree/master/leetcode/RemoveDuplicatesList.java)

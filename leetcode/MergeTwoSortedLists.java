@@ -1,10 +1,10 @@
 package leetcode;
 
-/*
+/**
  * Challenge: Merge two sorted linked lists and return it as a new list. The new
  * list should be made by splicing together the nodes of the first two lists.
  * Time-Complexity of Solution Provided: O(n)
- *  Space-Complexity of Solution Provided: O(1)
+ * Space-Complexity of Solution Provided: O(1)
  */
 
  public class MergeTwoSortedLists{
