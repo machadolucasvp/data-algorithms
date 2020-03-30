@@ -11,7 +11,7 @@ import java.util.Stack;
  * placed on top of a smaller disk. Write a program to move the disks from the
  * first tower to the last using Stacks. 
  * Time-Complexity of Solution Provided: O(2^n) 
- * Space-Complexity of Solution Provided: O(1)
+ * Space-Complexity of Solution Provided: O(n)
  */
 
 public class TowerOfHanoi {
@@ -32,17 +32,3 @@ public class TowerOfHanoi {
 }
 
 
-class Test {
-    public static void main(String[] args) {
-        Stack<Integer> stack1 = new Stack<>();
-        Stack<Integer> stack2 = new Stack<>();
-        Stack<Integer> stack3 = new Stack<>();
-        stack1.push(3);
-        stack1.push(2);
-        stack1.push(1);
-        TowerOfHanoi.moveDisks(stack1.size(), stack1, stack3, stack2);
-        for (Integer object : stack3){
-            System.out.println(object+"\n");
-        }
-    }
-}
