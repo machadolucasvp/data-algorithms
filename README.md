@@ -33,7 +33,7 @@
 * [Permutation I (without Duplicates)](https://github.com/lucasvufma/data-algorithms/tree/master/dynamicprogramming/Permutation.java)
 
 ## Leetcode
-
+* [(4) Median of Two Sorted Arrays](https://github.com/lucasvufma/data-algorithms/tree/master/leetcode/MedianOfArrays.java)
 * [(21) Merge Two Sorted Linked Lists](https://github.com/lucasvufma/data-algorithms/tree/master/leetcode/MergeTwoSortedLists.java)
 * [(83) Remove Duplicates Sorted List](https://github.com/lucasvufma/data-algorithms/tree/master/leetcode/RemoveDuplicatesList.java)
 * [(200) Number of Islands](https://github.com/lucasvufma/data-algorithms/tree/master/leetcode/NumberOfIslands.java)
